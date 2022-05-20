@@ -1,0 +1,99 @@
+.cover {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  margin-right: 20px;
+}
+.cover .masking {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  top: 0;
+  background-color: #8492D1;
+  z-index: 0;
+  margin-right: 20px;
+}
+.cover .credit {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
+.cover .social a {
+  color: white;
+}
+.cover img{
+  width: 300px;
+}
+.about{
+  margin: 20px;
+  width: 25%;
+  left: 100px;
+}
+
+
+
+.img{
+  float:left;
+}
+
+.button{
+  text-align="right";
+}
+
+.image-box{
+  flex-wrap: wrap;
+}
+
+.wrapper{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+}
+
+.about-container{
+  width:85%;
+  min-height: 80vh;
+  position: absolute;
+}
+.image-container{
+  flex: 1;
+}
+.image-container img{
+  width: 600px;
+  height: 600px;
+
+}
+
+text-container{
+  flex: 1;
+}
+
+.button{
+  position: absolute;
+
+}
+
+.jumbotron {
+  padding-top: 2rem;
+  background-color: #b9c2ec;
+}
+
+#projects {
+  background-color: white;
+}
+
+.navbar ul{
+  margin:left;
+}
+
+.btn{
+  position= relative;
+}

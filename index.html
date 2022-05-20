@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Portfolio | Niluh Sekar</title>   
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+      <div class="container">
+        <a class="navbar-brand" href="#">Navbar</a>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Gallery">Gallery</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- akhir navbar -->
+
+    <!--Header-->
+    <section id="home" background-image="images\bg.png">
+    <div class="cover">
+      <div class="masking"></div>
+      <small class="credit"><a href=""></a></small>
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-6 text-white">
+            <h1>{{headerniluh.title}}</h1>
+            <p>{{headerniluh.description}} </p>
+            <div class="social">
+              <a href=""><i class="bi-instagram"></i>niluh_skrlfa</a>
+              <a href=""><i class="bi-github"></i>niluh12345</a>
+            </div>
+          </div>
+          <div class="col-6 align-self-end text-center">
+            <img src="images\remove bg.png" width="300px">
+          </div>
+        </div>
+      </div>   
+    </div>
+  </section>
+
+
+
+    <section id="about">
+      <div class="container">
+        <div class="row text-center  text-center mb-3">
+          <div class="col">
+            <h2>About Me</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center fs-5 text-center">
+          <div class="col-md-4">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, earum tempora qui doloribus beatae amet dolorem 
+              minima est quaerat ratione voluptatum corrupti odio asperiores nisi enim error, quo fugit reiciendis.</p>
+          </div>
+          <div class="col-md-4">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem labore architecto, voluptatem, esse 
+              unde praesentium perferendis eaque explicabo repellendus molestias ad hic enim, ipsum sit magnam? Quidem optio ullam a.</p>
+          </div>
+        </div>
+      </div>
+     </section>
+     
+      <div class="row text-center mb-4">
+        <div class="col">
+          <div class="btn">
+            <a href="https://drive.google.com/file/d/12CsftTINiww2utyIH-dmPyD_0IPSEH6z/view?usp=sharing" class="btn">Download CV</a>
+          </div>
+        </div>
+      </div>
+
+
+  <br>
+  <br>
+  <br>
+
+  
+
+    <section id="projects">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <h2>My Projects</h2>
+            <br>
+          </div>
+        </div>
+        </div>
+        
+
+        
+
+
+              <div class="container pt-3">
+                <div class="row">
+                  <div class="col-md-4" v-for="item in articles">
+                    <div class="card">
+                      <img class="card-img-top" v-bind:src="item.thumbnail" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">{{item.title}}</h5>
+                        <p class="card-text">{{item.description}}</p>
+                        <a :href="'./read.html?artikel='+item.content" class="btn" role="button">Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    </section>
+  
+
+    <!--end header-->
+    <!--Articles-->
+   
+    
+    <style>
+      body{
+        margin: 0;
+      }
+      .main{
+        width:1200px;
+        height:100vh;
+        margin: auto;
+      }
+
+      .title{
+        text-align: center;
+        margin: 12px;
+        font-size: 24px;
+        margin-bottom: 50px;
+      }
+
+     .image-content{
+       height: 100%;
+       width: 100%;
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+     }
+
+     .image-box{
+       width: 300px;
+       height: 300px;
+       margin: 15px;
+     }
+
+     .image-box img{
+       width:77%;
+       
+     }
+
+    </style>
+    <body>
+      <div class="main" id="Gallery">
+        <h5 class="title"><b>Gallery</b></h5>
+        <div class="image-content">
+          <div class="image-box">
+            <img src="images\3.jpg" width:200px; alt="">
+          </div>
+
+          <div class="image-box">
+            <img src="images\4.png" width:200px; alt="">
+          </div>
+
+          <div class="image-box">
+            <img src="images\5.png" width:200px; alt="">
+          </div>
+
+          <div class="image-box">
+            <img src="images\8.png" width:200px; alt="" align:center;>
+          </div>
+
+          <div class="image-box">
+            <img src="images\7.png" width:200px; alt="">
+          </div>
+
+          <div class="image-box">
+            <img src="images\6.png" width:200px; alt="">
+          </div>
+
+          <div class="image-box">
+            <img src="images\9.png" width:200px; alt="">
+          </div>
+
+          <div class="image-box">
+            <img src="images\10.jpg" width:200px; alt="">
+          </div>
+
+          <div class="image-box">
+            <img src="images\11.png" width:200px; alt="">
+          </div>
+
+          <div class="image-box">
+            <img src="images\12.jpg" width:200px; alt="">
+          </div>
+
+          <div class="image-box">
+            <img src="images\13.jpg" width:200px; alt="">
+          </div>
+
+        </div>
+      </div>
+    </body>
+    
+
+    <!--end articles-->
+
+  
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.0.3/showdown.min.js"></script>
+    <script src="./main.js"></script>
+
+</body>
+
+</html>
