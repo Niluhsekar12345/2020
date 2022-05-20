@@ -16,7 +16,7 @@ Vue.createApp({
             title: " niluhsekar ",
           },
         },
-        imageProfile: "./images/remove.bg.png",
+        imageProfile: "./images/remove bg.png",
       },
       artikel: [],
       article: null,
@@ -25,7 +25,7 @@ Vue.createApp({
   methods: {
     getHeaderData() {
       axios
-        .get("https://raw.githubusercontent.com//Niluhsekar12345/tekweb2022/main/contents/headerniluh.json")
+        .get("https://raw.githubusercontent.com//Niluhsekar12345/tekweb2022/main/contents/header.json")
         .then((res) => {
           this.header = res.data;
           this.getArticles();
@@ -36,7 +36,7 @@ Vue.createApp({
     },
     getArticles() {
       axios
-        .get("https://raw.githubusercontent.com//Niluhsekar12345/tekweb2022/main/contents/artikel.json")
+        .get("https://raw.githubusercontent.com/Niluhsekar12345/tekweb2022/main/contents/artikel.json")
         .then((res) => {
           this.artikel = res.data;
         })
@@ -51,7 +51,7 @@ Vue.createApp({
       var converter = new showdown.Converter();
       console.log(artikel);
       axios
-        .get((src = "https://raw.githubusercontent.com//Niluhsekar12345/tekweb2022/main/contents/" + articles))
+        .get((src = "https://raw.githubusercontent.com//Niluhsekar12345/tekweb2022/main/contents/" + artikel))
         .then((res) => {
           var html = converter.makeHtml(res.data);
           this.article = html;
