@@ -16,7 +16,7 @@ Vue.createApp({
             title: " niluhsekar ",
           },
         },
-        imageProfile: "./images/remove bg.png",
+        imageProfile: "./images/remove_bg.png",
       },
       artikel: [],
       article: null,
