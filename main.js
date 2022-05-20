@@ -18,14 +18,14 @@ Vue.createApp({
         },
         imageProfile: "./images/remove_bg.png",
       },
-      artikel: [],
-      article: null,
+       articles:[],
+      article:null,
     };
   },
   methods: {
     getHeaderData() {
       axios
-        .get("https://raw.githubusercontent.com//Niluhsekar12345/tekweb2022/main/contents/header.json")
+        .get("https://raw.githubusercontent.com//Niluhsekar12345/tekweb2022/main/contents/header.json" 
         .then((res) => {
           this.header = res.data;
           this.getArticles();
@@ -36,9 +36,9 @@ Vue.createApp({
     },
     getArticles() {
       axios
-        .get("https://raw.githubusercontent.com/Niluhsekar12345/tekweb2022/main/contents/artikel.json")
+        .get("https://raw.githubusercontent.com/Niluhsekar12345/tekweb2022/main/contents/articles.json")
         .then((res) => {
-          this.artikel = res.data;
+          this.articles = res.data;
         })
         .catch((error) => {
           console.log(error);
@@ -47,11 +47,13 @@ Vue.createApp({
     getMarkdown() {
       const queryString = window.location.search;
       const urlParams = new URLSearchParams(queryString);
-      const artikel = urlParams.get("article");
+      const articles = urlParams.get('article');
       var converter = new showdown.Converter();
-      console.log(artikel);
+      console.log(articles);
       axios
-        .get((src = "https://raw.githubusercontent.com//Niluhsekar12345/tekweb2022/main/contents/" + artikel))
+        .get(
+          src = "https://raw.githubusercontent.com//Niluhsekar12345/tekweb2022/main/contents/" + articles
+        )
         .then((res) => {
           var html = converter.makeHtml(res.data);
           this.article = html;
@@ -60,10 +62,12 @@ Vue.createApp({
         .catch((error) => {
           console.log(error);
         });
-    },
+    }
   },
 
   beforeMount() {
-    this.getHeaderData(), this.getArticles(), this.getMarkdown();
-  },
+    this.getHeaderData(),
+      this.getArticles(),
+      this.getMarkdown()
+  }
 }).mount("#app");
